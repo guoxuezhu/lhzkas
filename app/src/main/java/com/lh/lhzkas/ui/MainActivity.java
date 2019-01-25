@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.provider.Settings;
 
 import com.lh.lhzkas.R;
-import com.lh.lhzkas.utils.HttpServerUtil;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -18,7 +17,6 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        HttpServerUtil.getInstance().startServer();
 
     }
 
@@ -31,10 +29,6 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @Override
-    public void onBackPressed() {
-        return;
-    }
 
     @Override
     protected void onDestroy() {
